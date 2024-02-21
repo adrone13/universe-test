@@ -10,7 +10,7 @@ import { InfraNotificationsModule } from './infra.notifications.module';
 
 @Module({
     imports: [
-        ConfigModule.forRoot(),
+        ConfigModule.forRoot({ isGlobal: true }),
         InfraRepositoriesModule,
         InfraNotificationsModule,
     ],

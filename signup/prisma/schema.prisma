@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+  extensions = [uuidOssp(map: "uuid-ossp")]
+}
+
+model User {
+  id        String @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  fullName  String @map("full_name")
+  email     String @unique
+  password  String
+  createdAt DateTime @map("created_at")
+
+  @@map("users")
+}

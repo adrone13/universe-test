@@ -26,14 +26,14 @@ export class User {
         return this._id;
     }
 
-    readonly createAt: Date;
+    readonly createdAt: Date;
 
     constructor(
         readonly fullName: string,
         readonly email: string,
         readonly password: string,
     ) {
-        this.createAt = new Date();
+        this.createdAt = new Date();
     }
 
     from(data: UserInitData) {

@@ -1,4 +1,5 @@
 import {
+    BadRequestException,
     Injectable,
     InternalServerErrorException,
     Logger,
@@ -26,6 +27,10 @@ export class Signup {
 
     async execute(input: SignupInput) {
         const { fullName, email, password } = input;
+
+        if (await this.usersRepository.emailExists(email)) {
+            throw new BadRequestException('signup_failed');
+        }
 
         const hashedPassword = await this.hashPassword(password);
         const user = new User(fullName, email, hashedPassword);
