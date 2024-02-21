@@ -1,0 +1,17 @@
+{
+  "name": "universe-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker compose up",
+    "build": "docker compose up -d --no-deps --build",
+    "stop": "docker compose down",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nestjs/cli": "^10.3.2"
+  }
+}
