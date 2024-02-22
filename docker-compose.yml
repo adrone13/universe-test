@@ -46,5 +46,13 @@ services:
       - "${DB_PORT}:5432"
     volumes:
       - ./signup/signup_db:/var/lib/postgresql/data
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - "./prometheus.yml:/etc/prometheus/prometheus.yml"
+    ports:
+      - 9090:9090
+
 volumes:
   signup_db:
