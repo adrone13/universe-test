@@ -1,5 +1,5 @@
 # Simple microservice test app
-Application consists multiple components:
+Application consists of multiple components:
 * Signup
   * NodeJS service
   * PostgreSQL database
