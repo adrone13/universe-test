@@ -2,10 +2,10 @@ import { Controller, Get } from '@nestjs/common';
 
 @Controller()
 export class AppController {
-  constructor() {}
+    constructor() {}
 
-  @Get()
-  getHello(): string {
-    return 'notifications_service is up!';
-  }
+    @Get()
+    getHello(): string {
+        return 'notifications_service is up!';
+    }
 }
