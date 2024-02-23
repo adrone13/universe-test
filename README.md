@@ -29,7 +29,7 @@ $ npm run start:dev
 4. Starting Notifications service
 ```bash 
 $ cd universe-test/notifications
-$ npm run start:Dev
+$ npm run start:dev
 ```
 
 
