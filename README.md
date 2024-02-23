@@ -1,5 +1,5 @@
 # Simple microservice test app
-Application consists multiple components:
+Application consists of multiple components:
 * Signup
   * NodeJS service
   * PostgreSQL database
@@ -28,7 +28,7 @@ $ npm run start:dev
 ```
 4. Starting Notifications service
 ```bash 
-$ cd universe-test/signup
+$ cd universe-test/notifications
 $ npm run start:Dev
 ```
 
