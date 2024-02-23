@@ -1,40 +1,4 @@
 services:
-  signup_service:
-    container_name: signup_service
-    build:
-      context: signup
-    env_file:
-      - signup/.env
-    command: >
-      sh -c "
-      echo signup_service is ready to fly!;
-      yarn start:dev
-      "
-    ports:
-      - "${SIGNUP_PORT}:3000"
-    volumes:
-      - ./signup/src:/app/src
-      - ./signup/test:/app/test
-    depends_on:
-      - signup_db
-
-  notifications_service:
-    container_name: notifications_service
-    build:
-      context: notifications
-    env_file:
-      - notifications/.env
-    command: >
-      sh -c "
-      echo notifications_service is ready to fly!;
-      yarn start:dev
-      "
-    ports:
-      - "${NOTIFICATIONS_PORT}:3000"
-    volumes:
-      - ./notifications/src:/app/src
-      - ./notifications/test:/app/test
-
   signup_db:
     container_name: signup_db
     image: postgres:16
